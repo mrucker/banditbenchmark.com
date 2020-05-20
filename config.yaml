@@ -5,5 +5,5 @@ title: Bandit Benchmarking
 #this removes the default tag and category taxonomies
 taxonomies: []
 
-#this turns off these kinds of pages effectively killing all taxonomies
+#this prevents these kinds of pages from being rendered
 disableKinds: ["taxonomy", "taxonomyTerm", "RSS"]
