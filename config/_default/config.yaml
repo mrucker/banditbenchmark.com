@@ -1,9 +1,0 @@
-baseURL: http://banditbenchmark.com"
-languageCode: en-us
-title: Bandit Benchmarking
-
-#this removes the default tag and category taxonomies
-taxonomies: []
-
-#this prevents these kinds of pages from being rendered
-disableKinds: ["taxonomy", "taxonomyTerm", "RSS"]
