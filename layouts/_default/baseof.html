@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-	<body>
-		{{ template "main" . }}
-	</body>
+    <head>
+        <!--twitter bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <!--encoding-->
+        <meta charset="utf-8">
+
+        <!--responsive-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--favicon-->
+        <link rel="shortcut icon" href="/assets/favicon.ico" />
+
+        {{ $style :=  resources.Get "main.min.css" | resources.ExecuteAsTemplate "assets/main.min.css" . | fingerprint "md5" }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    </head>
+    <body>
+        
+        <div class="container">
+            <header id="banner">
+                <a class="title" href="/">
+                    <img title="Bandit" alt="Bandit logo" src="assets/logo.svg">Bandit Benchmark
+                </a>
+                <nav role="navigation">
+                    <div class="row">
+                        <div class="col-auto"> <a href="/"> Leaderboard </a> </div>
+                        <div class="col-auto"> <a href="/"> Submit </a> </div>
+                        <div class="col-auto"> <a href="/"> Get Started </a> </div>
+                    </div>
+                </nav>
+            </header>
+            
+            <div id="content">
+                {{ template "main" . }}
+            </div>
+        </div>
+    
+        
+    </body>
+    
 </html>
